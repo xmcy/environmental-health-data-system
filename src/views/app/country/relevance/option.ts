@@ -1,4 +1,5 @@
 let option: any = {
+    backgroundColor: "rgba(0,0,0,0",
     tooltip: {
         trigger: "item"
     },

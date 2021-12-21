@@ -61,7 +61,7 @@ export class Relevance extends GTemplate {
                     value: g.value[index].value
                 };
             });
-            let values= this.data.map(g => g.value[index].value);
+            let values = this.data.map(g => g.value[index].value);
             valueArr = valueArr.concat(values);
             maxValue = Math.max(...valueArr);
         });

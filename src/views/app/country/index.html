@@ -2,6 +2,7 @@
     <CommonDiseases :country="active" />
     <AgeDistribution :country="active" />
     <AgeTrend :country="active" />
+    <Habits :country="active" />
     <Relevance :country="active" />
     <div class="countries">
         <div :class="['item',{'active':item.code===active}]" v-for="(item,index) in data" @click.stop="onChoose(item)">
