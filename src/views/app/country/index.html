@@ -1,0 +1,11 @@
+<article class="country">
+    <CommonDiseases :country="active" />
+    <AgeDistribution :country="active" />
+    <AgeTrend :country="active" />
+    <Relevance :country="active" />
+    <div class="countries">
+        <div :class="['item',{'active':item.code===active}]" v-for="(item,index) in data" @click.stop="onChoose(item)">
+            {{item.text}}</div>
+    </div>
+    <CenterAnimation />
+</article>

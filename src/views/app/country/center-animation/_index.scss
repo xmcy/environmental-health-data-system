@@ -1,0 +1,30 @@
+@charset 'UTF-8';
+
+.center-animation {
+  @include size(8.4rem, 6rem);
+  @include absolute($top: 1rem, $left: 50%);
+  transform: translateX(-50%);
+  .animation-warpper {
+    @include size;
+    position: relative;
+    #ballCanvas,
+    #mainCanvas,
+    #startCanvas {
+      @include absolute($top: 50%, $left: 50%);
+      transform: translate(-50%, -50%);
+    }
+    #ballCanvas {
+      z-index: 1;
+    }
+    #startCanvas {
+      z-index: 2;
+    }
+    .star {
+      position: absolute;
+      border-radius: 50%;
+      z-index: 3;
+      background-color: rgba(247, 236, 89, 1);
+      box-shadow: 0 0 0.1rem 0.02rem rgba(247, 236, 89, 0.9);
+    }
+  }
+}

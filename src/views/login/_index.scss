@@ -1,0 +1,57 @@
+.v-login {
+    @include size;
+    @include flex(row, center, center);
+    @include bg-img("~@/assets/images/login-bg.png");
+    @include flex(row, center, center);
+    background-size: 100% 100%;
+    position: relative;
+    .content-left {
+        @include size(640px, 608px);
+        @include bg-img("~@/assets/images/login-pic1.png");
+    }
+    .content-right {
+        @include size(608px, 500px);
+        @include bg-img("~@/assets/images/login-pic2.png");
+        margin: 78px 0 0 -126px;
+        padding: 100px 80px 80px 190px;
+        .title {
+            @include flex(row, flex-start, center);
+            height: 60px;
+            margin-bottom: 20px;
+
+            .logo {
+                @include size(40px, 40px);
+                // @include bg-img("~@/assets/images/logo.png");
+                margin-right: 16px;
+            }
+
+            .text {
+                @include size(327px, 32px);
+                // @include bg-img("~@/assets/images/title.png");
+            }
+        }
+        .login-btn {
+            @include size(116px, 40px);
+            @include flex(row, center, center);
+            margin: 40px auto 0;
+            font-size: 16px;
+            background: linear-gradient(180deg, #00b7ff, #3c75e3);
+            border: 0px solid #90cbff;
+            border-radius: 2px;
+        }
+        .ant-input-prefix {
+            .anticon {
+                font-size: 16px;
+                color: rgba(141, 176, 255, 0.5);
+            }
+        }
+        .ant-input,
+        .ant-input:hover {
+            height: 40px;
+            padding-left: 40px;
+            font-size: 16px;
+            background-color: #192f63;
+            border-color: #192f63;
+        }
+    }
+}

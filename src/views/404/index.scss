@@ -1,0 +1,39 @@
+@charset 'UTF-8';
+
+.home-404 {
+    @include size;
+    @include flex(row, center, center);
+    background: linear-gradient(180deg, #303750 0%, #131930);
+
+    .wrapper {
+        @include flex(row);
+        margin-top: 150px;
+        .bg {
+            @include size(592px, 692px);
+            @include bg-img("~@/assets/images/404.png");
+            margin-right: 160px;
+        }
+        .detail {
+            font-size: 18px;
+            color: #fff;
+            .heading {
+                font-size: 64px;
+                padding-top: 100px;
+                color: #fff;
+            }
+            .reload-button {
+                width: 100px;
+                padding: 6px 0;
+                text-align: center;
+                background: linear-gradient(180deg, #00b7ff, #3c75e3);
+                border: 0px solid #90cbff;
+                border-radius: 2px;
+                cursor: pointer;
+                margin-top: 30px;
+                a {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

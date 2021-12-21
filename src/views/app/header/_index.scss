@@ -1,0 +1,33 @@
+@charset 'UTF-8';
+
+.header {
+    @include size(100%, 1rem);
+    @include bg-img("~@/assets/images/header-bg.png");
+    position: fixed;
+    top: 0;
+    .content {
+        @include size;
+        position: relative;
+        > .logo {
+            @include size(2.2rem, 0.3rem);
+            @include bg-img("~@/assets/images/huake.png");
+            @include absolute($top: 7%, $left: 1%);
+        }
+        > .time {
+            @include size(auto, 0.3rem);
+            @include absolute($top: 10%, $right: 1%);
+            font-size: .16rem;
+        }
+        > p {
+            @include font(0.36rem, 600);
+            @include absolute($top: 12%, $left: 50%);
+            transform: translateX(-50%);
+            letter-spacing: 0.04rem;
+            color: rgba(224, 244, 239, 1);
+            text-shadow: 0rem 0rem 0.08rem rgba(0, 0, 0, 0.5);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 1) 30%,#00DFFF 80%,#00DFFF 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+@charset 'UTF-8';
+
+.app {
+    @include size;
+    overflow: auto;
+    background: linear-gradient(180deg, #303750 0%, #131930);
+    position: relative;
+}

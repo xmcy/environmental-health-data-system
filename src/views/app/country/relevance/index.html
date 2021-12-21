@@ -1,0 +1,13 @@
+<article class="relevance">
+    <header>
+        <span>{{title}}</span>
+    </header>
+    <main>
+        <div class="chart-warper">
+            <g-ECharts :update-options="{notMerge: true}" :option="chartBgOption" autoresize />
+        </div>
+        <div class="chart-warper">
+            <g-ECharts :update-options="{notMerge: true}" :option="chartOption" autoresize />
+        </div>
+    </main>
+</article>

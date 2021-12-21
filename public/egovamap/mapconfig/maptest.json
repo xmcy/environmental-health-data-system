@@ -1,0 +1,34 @@
+{
+    "mapconfig": {
+        "params": {
+            "navi": "{visible:true,bottom:30,right:30}",
+            "toolbar": "{visible:false}",
+            "geocode": "{visible:false}",
+            "scalebar": "{visible:false}",
+            "switchbar": "{right:100,top:100}",
+            "fastdisplaylayer": "{visible:false}",
+            "debug": true
+        }
+    },
+    "context": {
+        "humanID": "-1",
+        "originPath": "",
+        "mapCenterFlag": "",
+        "coordinateX": "",
+        "coordinateY": "",
+        "humanLayerUsageID": "",
+        "regionCode": "",
+        "humanLayerKeyFieldName": "",
+        "mapZoomRange": "",
+        "mmsEnabled": "",
+        "mmsParams": "",
+        "globeParams": "",
+        "globeEnabled": false,
+        "globeServerURL": "",
+        "globeCallBack": "",
+        "gisEnabled": false,
+        "currentMapType": "",
+        "mmsServerURL": "",
+        "assetsPath": "egovamap"
+    }
+}

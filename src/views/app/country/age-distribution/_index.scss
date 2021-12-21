@@ -1,0 +1,17 @@
+@charset 'UTF-8';
+@import "@/component/template";
+
+.age-distribution {
+    @extend %g-template;
+    @extend %g-template-style;
+    @include size(5.3rem, 5.4rem);
+    @include absolute($top: 1rem, $right: 0.2rem);
+    font-size: 0.12rem;
+    overflow: visible;
+
+    main {
+        .echarts {
+            @include size;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "mapconfig": {
+        "params": {
+            "navi": "{visible:false,left:20,top:90}",
+            "toolbar": "{items:'zoomin,zoomout,pan,fullextent,measurelength,measurearea,refresh,layertree,identify,snap,locatexy',visible:true,left:20,top:60}",
+            "geocode": "{visible:false,right:20,top:60}",
+            "trace": "{visible:false,right:5,bottom:185}",
+            "switchbar": "{visible:false,right:20,top:102}",
+            "layertree": "{visible:false,top:160}"
+        },
+        "mapconfig3D": {
+            "toolbar": "{visible:false,left:20,top:60}",
+            "navigation": "{visible:false}",
+            "infobox": "{showlogo:false,showcoord:false}",
+            "config": "sysconfig3d_yunse.json"
+        },
+        "mapSwish": "{visible:false,left:100,top:60}",
+        "maskPos": {
+            "top": 95
+        }
+    },
+    "context": {
+        "humanID": "-1",
+        "originPath": "",
+        "mapCenterFlag": "",
+        "coordinateX": "",
+        "coordinateY": "",
+        "humanLayerUsageID": "",
+        "regionCode": "",
+        "humanLayerKeyFieldName": "",
+        "mapZoomRange": "",
+        "mmsEnabled": "",
+        "mmsParams": "",
+        "globeParams": "",
+        "globeEnabled": true,
+        "globeServerURL": "http://www.egova.top:8082/eUrbanGIS",
+        "globeCallBack": "",
+        "gisEnabled": false,
+        "currentMapType": "",
+        "mmsServerURL": "",
+        "assetsPath": "egovamap"
+    }
+}

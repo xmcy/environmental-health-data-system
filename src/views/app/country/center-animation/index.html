@@ -1,0 +1,9 @@
+<article class="center-animation">
+    <div class="animation-warpper">
+        <p-BallMoving />
+        <p-EarthMoving />
+        <div v-if="liziStyle.length===option.liziNum" class="star" v-for="(item,index) in option.liziNum" :key="index"
+            :style="'width:' + liziStyle[index].width + 'rem;height:' + liziStyle[index].width +'rem;top:' + liziStyle[index].top + 'rem;right:' + liziStyle[index].right + 'rem;opacity:' + liziStyle[index].opacity">
+        </div>
+    </div>
+</article>

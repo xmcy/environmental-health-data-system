@@ -1,0 +1,14 @@
+@charset 'UTF-8';
+
+@import "./din/din",
+"./led/led";
+
+
+/* --------------------------------------------
+                1、 iconfont字体
+---------------------------------------------*/
+.iconmore {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

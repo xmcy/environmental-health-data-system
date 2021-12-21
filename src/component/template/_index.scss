@@ -1,0 +1,65 @@
+@charset 'UTF-8';
+$height-header: 0.4rem;
+$font-color-white-g: #fff;
+.g-template {
+    @extend %g-template;
+}
+
+%g-template {
+    @include flex(column, flex-start, stretch);
+    padding: 0;
+    z-index: auto;
+    background: rgba(6, 25, 43, 0.42);
+    box-shadow: inset 0px 0px 3px 2px rgba(25, 140, 255, 0.52);
+    border: 1px solid;
+    border-image: linear-gradient(180deg, rgba(58, 95, 201, 1), rgba(64, 197, 255, 0), rgba(58, 92, 199, 1)) 1 1;
+    color: #fff;
+    z-index: 0;
+    > header {
+        height: $height-header;
+        line-height: $height-header;
+        padding-left: 0.6rem;
+        font-size: 0.16rem;
+        color: $font-color-white-g;
+        letter-spacing: 1px;
+        cursor: default;
+        margin-bottom: 0;
+        position: relative;
+        color: rgba(56, 221, 255, 1);
+
+        & > span {
+            cursor: default;
+        }
+        &:before {
+            content: "";
+            @include size(0.38rem, 0.34rem);
+            @include absolute($top: 0.03rem, $left: 0.14rem);
+            @include bg-img("~@/assets/images/header-icon.png");
+            animation: showing 2s infinite;
+        }
+        @keyframes showing {
+            0% {
+                opacity: 0.4;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.4;
+            }
+        }
+    }
+    & > main {
+        flex: none;
+        height: calc(100% - #{$height-header});
+    }
+}
+
+%g-template-style {
+    background: url("~@/assets/images/section-bg-top-left.png") 0 0 no-repeat, url("~@/assets/images/section-bg-top-right.png") 100% 0 no-repeat,
+        url("~@/assets/images/section-bg-bottom-left.png") 0 100% no-repeat, url("~@/assets/images/section-bg-bottom-right.png") 100% 100% no-repeat;
+    clip-path: polygon(1.2% 0%, 98.8% 0%, 100% 1.8%, 100% 98.2%, 98.8% 100%, 1.2% 100%, 0% 98.8%, 0% 1.8%);
+    @media screen and (max-width: 1920px) {
+        clip-path: polygon(2.4% 0%, 97.6% 0%, 100% 4%, 100% 96%, 97.6% 100%, 2.4% 100%, 0% 96%, 0% 4%);
+    }
+}

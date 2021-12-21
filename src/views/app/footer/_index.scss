@@ -1,0 +1,33 @@
+@charset 'UTF-8';
+
+.footer {
+    @include size(100%, 1.3rem);
+    @include absolute($bottom: 0, $left: 0);
+    @include flex(row, space-around, center);
+    padding: 0 5%;
+    z-index: 2;
+    .module {
+        @include size(1.7rem, 0.48rem);
+        @include flex(row, center, center);
+        @include font(0.2rem, 500);
+        color: rgba(255, 255, 255, 0.8);
+        letter-spacing: 0.02rem;
+        background: rgba(1, 181, 181, 0.2);
+        border-radius: 0.24rem;
+        cursor: pointer;
+        .note {
+            @include font(0.14rem, 500);
+        }
+    }
+    .active {
+        background: linear-gradient(360deg, #1c87d4 0%, #33d9fb 100%);
+    }
+    .left-line {
+        @include size(3.2rem, 0.26rem);
+        @include bg-img("~@/assets/images/footer-left.png");
+    }
+    .right-line {
+        @include size(3.2rem, 0.26rem);
+        @include bg-img("~@/assets/images/footer-right.png");
+    }
+}

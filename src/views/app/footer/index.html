@@ -1,0 +1,8 @@
+<header class="footer">
+    <div class="left-line"></div>
+    <div v-for="(item, index) of list" :key="index" @click.stop="onMenuChange(item.name)"
+        :class="['module', currentTitle === item.name ? 'active' : '']">
+        {{item.title}}<span v-if="item.note" class="note">{{item.note}}</span>
+    </div>
+    <div class="right-line"></div>
+</header>
