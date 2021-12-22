@@ -9,7 +9,6 @@ import router from "./router";
 import store from "./store";
 import directives from "@/common/directive";
 import "echarts";
-import "echarts-gl";
 import ECharts from "vue-echarts";
 import VueAwesomeSwiper from "vue-awesome-swiper";
 import { VueAxios } from "@/common/utils/axios";

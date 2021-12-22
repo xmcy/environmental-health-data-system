@@ -2,7 +2,7 @@ import { Component } from "vue-property-decorator";
 import { GTemplate } from "@/component/template";
 import { BallMoving } from "../ball-moving";
 import { EarthMoving } from "../earth-moving";
-import "./_index.scss";
+import "./index.scss";
 
 @Component({
     template: require("./index.html"),

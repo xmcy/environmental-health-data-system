@@ -1,7 +1,7 @@
 import { Component, Prop, Watch } from "vue-property-decorator";
 import { GTemplate } from "@/component/template";
 import option from "./option";
-import "./_index.scss";
+import "./index.scss";
 
 @Component({
     template: require("./index.html")
@@ -95,6 +95,6 @@ export class Habits extends GTemplate {
             };
             this.chartOption.series.push(obj);
         });
-        console.log(this.chartOption.series);
+        console.log(111,this.chartOption.series[0]);
     }
 }

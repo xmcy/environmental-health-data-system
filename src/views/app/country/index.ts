@@ -5,6 +5,7 @@ import { AgeDistribution } from "./age-distribution";
 import { AgeTrend } from "./age-trend";
 import { Relevance } from "./relevance";
 import { Habits } from "./habits";
+import { PopulationDistribution } from "./population-distribution";
 import "./index.scss";
 
 @Component({
@@ -15,6 +16,7 @@ import "./index.scss";
         AgeDistribution,
         Habits,
         Relevance,
+        PopulationDistribution,
         AgeTrend
     }
 })

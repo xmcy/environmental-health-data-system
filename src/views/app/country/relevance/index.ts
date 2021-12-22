@@ -2,7 +2,7 @@ import { Component, Prop, Watch } from "vue-property-decorator";
 import { GTemplate } from "@/component/template";
 import option from "./option";
 import bgOption from "./option-bg";
-import "./_index.scss";
+import "./index.scss";
 
 @Component({
     template: require("./index.html")
