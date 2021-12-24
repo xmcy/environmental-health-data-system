@@ -3,7 +3,6 @@ import "@/common/utils/vue-function";
 import "@/assets/styles";
 import Bus from "@/common/bus";
 import Timer from "@/common/timer";
-import Screen from "@/assets/styles/screen";
 import Antd from "ant-design-vue";
 import router from "./router";
 import store from "./store";
@@ -45,7 +44,7 @@ new Vue({
     router,
     store,
     mounted() {
-        Vue.prototype.$screen = new Screen();
+        // Vue.prototype.$screen = new Screen();
     },
     template: "<div id='app'><router-view /></div>"
 }).$mount("#app");

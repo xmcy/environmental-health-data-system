@@ -56,15 +56,8 @@ export class Screen {
 
     public resize() {
         const htmlHeight = Math.max(document.documentElement.clientHeight, this.minHeight);
-        document.documentElement.style.cssText =
-            this.designWidth > 1920
-                ? `width: ${(this.designWidth * htmlHeight) / this.designHeight}px;
+        document.documentElement.style.cssText = `width: ${(this.designWidth * htmlHeight) / this.designHeight}px;
             height: ${htmlHeight}px;
-            font-size: ${htmlHeight / (this.designHeight / 100)}px;`
-                : `width: 100%;
-            height: 100%;
-            min-width: ${this.minWidth}px;
-            min-height: ${this.minHeight}px;
             font-size: ${htmlHeight / (this.designHeight / 100)}px;`;
     }
 }

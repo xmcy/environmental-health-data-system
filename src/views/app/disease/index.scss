@@ -1,0 +1,6 @@
+@charset 'UTF-8';
+
+.disease {
+    @include size;
+    z-index: 2;
+}

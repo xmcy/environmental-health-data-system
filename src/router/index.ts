@@ -24,6 +24,19 @@ const routes: Array<RouteConfig> = [
         component: () => import("@/views/app")
     },
     {
+        path: "/",
+        name: "disease",
+        redirect: "/login",
+        children: [
+            {
+                path: "/disease",
+                name: "disease",
+                component: () => import(/* webpackChunkName: "home" */ "@/views/app/disease")
+            }
+        ],
+        component: () => import("@/views/app")
+    },
+    {
         name: "login",
         path: "/login",
         component: () => import(/* webpackChunkName: "login" */ "@/views/login")

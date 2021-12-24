@@ -26,7 +26,7 @@ export class PopulationDistribution extends GTemplate {
     }
 
     async query() {
-        let data: any = await this.service.get(`/free/country/population-distribution/${this.country}`);
+        let data: any = await this.service.get("/free/depression/population-distribution");
         if (!data || !data.result) {
             this.data = [];
             return;
@@ -37,8 +37,8 @@ export class PopulationDistribution extends GTemplate {
     }
 
     initChart() {
-        let age = this.data?.overall.age;
-        let sex = this.data?.overall.sex;
+        let age = this.data?.age;
+        let sex = this.data?.sex;
         let data: any = [];
         let data2: any = [];
         age.forEach((g: any, index: any) => {
@@ -84,7 +84,7 @@ export class PopulationDistribution extends GTemplate {
     }
 
     initChart2() {
-        let income = this.data?.overall.income;
+        let income = this.data?.place;
         let data: any = [];
         income.forEach((g: any, index: any) => {
             let obj = {
@@ -105,7 +105,7 @@ export class PopulationDistribution extends GTemplate {
             data.push(obj);
         });
         this.chartOption2.series[2].data = data;
-        this.chartOption2.series[2].name = "收入";
+        this.chartOption2.series[2].name = "地区";
         this.chartOption2.series[3] = [];
         this.chartOption2.series.pop();
     }

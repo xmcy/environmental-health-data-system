@@ -1,0 +1,52 @@
+import { Component, Prop, Watch } from "vue-property-decorator";
+import { GTemplate } from "@/component/template";
+import option from "./option";
+import "./index.scss";
+
+@Component({
+    template: require("./index.html")
+})
+export class Provinces extends GTemplate {
+    @Prop({ default: "心理健康省份排行榜" })
+    title!: string;
+    @Prop({ default: "" })
+    country!: string;
+
+    // get colors() {
+    //     return this.chartOption.color;
+    // }
+    data: Array<any> = [];
+    chartOption = option;
+    xData = [];
+    legendData: any = [];
+
+    @Watch("country", { immediate: true, deep: true })
+    change() {
+        this.query();
+    }
+
+    // created() {
+    //     this.chartOption.color = this.colors;
+    // }
+
+    async query() {
+        let data: any = await this.service.get("/free/depression/rank/province");
+        if (!data || !data.result) {
+            this.data = [];
+            return;
+        }
+        this.data = data.result;
+        this.initChart();
+    }
+
+    initChart() {
+        let data = this.data.map((g: any, index: number) => {
+            return {
+                name: `TOP${index + 1}  ${g.text}`,
+                value: g.value
+            };
+        });
+        this.chartOption.yAxis.data = data.map(g => g.name);
+        this.chartOption.series[1].data = data;
+    }
+}

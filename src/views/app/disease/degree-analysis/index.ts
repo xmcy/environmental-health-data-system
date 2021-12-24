@@ -6,8 +6,8 @@ import "./index.scss";
 @Component({
     template: require("./index.html")
 })
-export class Habits extends GTemplate {
-    @Prop({ default: "生活习惯统计" })
+export class DegreeAnalysis extends GTemplate {
+    @Prop({ default: "心理健康程度分析" })
     title!: string;
     @Prop({ default: "" })
     country!: string;
@@ -35,7 +35,7 @@ export class Habits extends GTemplate {
     }
 
     async query() {
-        let data: any = await this.service.get(`/free/country/living-habits/${this.country}`);
+        let data: any = await this.service.get("/free/depression/distribution");
         if (!data || !data.result) {
             this.data = [];
             return;
