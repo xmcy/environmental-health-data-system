@@ -1,17 +1,35 @@
 import { Vue, Component, Watch } from "vue-property-decorator";
-import { DegreeAnalysis } from "./degree-analysis";
 import { Trend } from "./trend";
-import { PopulationDistribution } from "./population-distribution";
 import { Provinces } from "./provinces";
+import { PopulationDistribution } from "./population-distribution";
 import "./index.scss";
 
 @Component({
     template: require("./index.html"),
     components: {
-        DegreeAnalysis,
         Trend,
         Provinces,
         PopulationDistribution
     }
 })
-export default class Disease extends Vue {}
+export default class Disease extends Vue {
+    data: Array<any> = [];
+    active: any = null;
+    mounted() {
+        this.query();
+    }
+
+    async query() {
+        let res: any = await this.service.get("/free/disease/list");
+        if (!res || !res.result) {
+            this.data = [];
+            return;
+        }
+        this.data = res.result;
+        this.active = this.data[0].code;
+    }
+
+    onChoose(item: any) {
+        this.active = item.code;
+    }
+}

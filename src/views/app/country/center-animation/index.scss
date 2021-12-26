@@ -1,6 +1,6 @@
 @charset 'UTF-8';
 
-.center-animation {
+.country .center-animation {
   @include size(8.4rem, 5.5rem);
   @include absolute($top: 1rem, $left: 50%);
   transform: translateX(-50%);

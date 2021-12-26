@@ -26,7 +26,7 @@ export class Relevance extends GTemplate {
     }
 
     async query() {
-        let data: any = await this.service.get(`/free/country/disease-living-income/$this.country}`);
+        let data: any = await this.service.get(`/free/country/disease-living-income/${this.country}`);
         if (!data || !data.result) {
             this.data = [];
             return;

@@ -1,4 +1,4 @@
-import { Component, Prop, Watch } from "vue-property-decorator";
+import { Component, Prop } from "vue-property-decorator";
 import { GTemplate } from "@/component/template";
 import { cloneDeep } from "lodash-es";
 import option from "./option";
@@ -10,8 +10,6 @@ import "./index.scss";
 export class PopulationDistribution extends GTemplate {
     @Prop({ default: "人群分布" })
     title!: string;
-    @Prop({ default: "" })
-    disease!: string;
 
     data: any = [];
     chartOption = cloneDeep(option);
@@ -19,12 +17,9 @@ export class PopulationDistribution extends GTemplate {
     sexColor = ["rgba(2, 145, 255, 1)", "rgba(238, 102, 103, 1)"];
     color: any = ["rgba(90, 133, 231, 1)", "rgba(107, 217, 141, 1)", "rgba(255, 190, 70, 1)", "rgba(0, 223, 255, 1)"];
     colors: any = ["rgba(0, 223, 255, 1)", "rgba(107, 217, 141, 1)", "rgba(90, 133, 231, 1)"];
-    @Watch("disease", { immediate: true, deep: true })
-    change() {
-        this.query();
-    }
+
     async query() {
-        let data: any = await this.service.get(`/free/disease/population-distribution/${this.disease}`);
+        let data: any = await this.service.get("/free/depression/population-distribution");
         if (!data || !data.result) {
             this.data = [];
             return;

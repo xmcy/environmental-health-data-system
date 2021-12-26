@@ -20,7 +20,7 @@ export class Footer extends Vue {
             note: "(中国)"
         },
         {
-            name: "psychological",
+            name: "psychology",
             title: "心理状况",
             note: "(中国)"
         },

@@ -42,13 +42,11 @@ export class AgeDistribution extends GTemplate {
         this.chartOption.color = this.colors;
         this.chartOption.series = [];
         this.chartOption.yAxis.data = [];
-        this.yData = [];
-        let data = this.data[0].value.map((g: any) => {
-            return g?.text;
-        });
-        this.data.forEach((g: any, index: any) => {
-            let y = {
-                name: data[index],
+        this.yData = this.data.map((i: any) =>i.text);
+        let data = (this.data[0].value).map((g: any) => g);
+        data.forEach((g: any, index: any) => {
+            let obj = {
+                name:g.text,
                 stack: "total",
                 type: "bar",
                 barMaxWidth: "34%",
@@ -58,10 +56,9 @@ export class AgeDistribution extends GTemplate {
                 emphasis: {
                     focus: "series"
                 },
-                data: g.value.map((i: any) => i.value)
+                data: this.data.map((i: any) => i.value[index].value)
             };
-            this.yData.push(g?.text);
-            this.chartOption.series.push(y);
+            this.chartOption.series.push(obj);
         });
         this.chartOption.yAxis.data = this.yData;
     }

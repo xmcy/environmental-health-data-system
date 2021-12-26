@@ -1,4 +1,4 @@
-import { Component, Prop } from "vue-property-decorator";
+import { Component, Prop, Watch } from "vue-property-decorator";
 import { GTemplate } from "@/component/template";
 import option from "./option";
 import "./index.scss";
@@ -7,7 +7,7 @@ import "./index.scss";
     template: require("./index.html")
 })
 export class Trend extends GTemplate {
-    @Prop({ default: "常见慢病趋势" })
+    @Prop({ default: "心理健康趋势变化" })
     title!: string;
 
     get colors() {
@@ -23,7 +23,7 @@ export class Trend extends GTemplate {
     }
 
     async query() {
-        let data: any = await this.service.get("/free/disease/trends");
+        let data: any = await this.service.get("/free/depression/trends");
         if (!data || !data.result) {
             this.data = [];
             return;

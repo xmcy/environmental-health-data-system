@@ -28,7 +28,7 @@ export default class Country extends Vue {
     }
 
     async query() {
-        let res: any = await this.service.get(`/free/general/countries`);
+        let res: any = await this.service.get("/free/general/countries");
         if (!res || !res.result) {
             this.data = [];
             return;

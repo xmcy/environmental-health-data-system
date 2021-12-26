@@ -3,4 +3,23 @@
 .disease {
     @include size;
     z-index: 2;
+    .diseases {
+        @include size(1rem, auto);
+        @include absolute($top: 3.3rem, $right: 5.7rem);
+        > .item {
+            @include size(1rem, 0.3rem);
+            @include flex(row, center, center);
+            font-size: 0.14rem;
+            margin-bottom: 0.18rem;
+            color: #bbe7f0;
+            background: linear-gradient(180deg, #3a5fc9 0%, rgba(58, 95, 201, 0) 35%, rgba(58, 95, 201, 0.26) 72%, #3a5fc9 100%);
+            border: 1px solid;
+            border-image: linear-gradient(180deg, rgba(70, 127, 224, 1), rgba(92, 150, 231, 0), rgba(82, 140, 228, 0), rgba(70, 127, 224, 1)) 1 1;
+            cursor: pointer;
+        }
+        > .active {
+            background: linear-gradient(180deg, #00c2f6 0%, rgba(92, 188, 241, 0.38) 53%, #00c2f6 99%);
+            border-image: linear-gradient(180deg, rgba(156, 217, 255, 1), rgba(96, 158, 247, 0), rgba(82, 140, 228, 0), rgba(156, 217, 255, 1)) 1 1;
+        }
+    }
 }

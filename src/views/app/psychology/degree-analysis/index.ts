@@ -1,4 +1,4 @@
-import { Component, Prop, Watch } from "vue-property-decorator";
+import { Component, Prop } from "vue-property-decorator";
 import { GTemplate } from "@/component/template";
 import option from "./option";
 import "./index.scss";
@@ -9,8 +9,6 @@ import "./index.scss";
 export class DegreeAnalysis extends GTemplate {
     @Prop({ default: "心理健康程度分析" })
     title!: string;
-    @Prop({ default: "" })
-    country!: string;
 
     data: Array<any> = [];
     chartOption = option;
@@ -28,11 +26,6 @@ export class DegreeAnalysis extends GTemplate {
             after: "rgba(28, 34, 45, 1)"
         }
     ];
-
-    @Watch("country", { immediate: true, deep: true })
-    change() {
-        this.query();
-    }
 
     async query() {
         let data: any = await this.service.get("/free/depression/distribution");

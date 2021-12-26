@@ -2,7 +2,7 @@ let option: any = {
     textStyle: {
         color: "#3FB0FF"
     },
-    color: ["rgba(249, 133, 75, 1)", "rgba(250, 227, 0, 1)", "rgba(2, 145, 255, 1)", "rgba(0, 209, 60, 1)", "rgba(225, 100, 255, 1)", "#00D13C", "#E164FF"],
+    color: ["#FFBE46", "#0291FF", "#EE6667", "#FAE300", "#F9854B", "#00D13C", "#E164FF"],
     legend: {
         show: true,
         icon: "circle",
@@ -40,7 +40,7 @@ let option: any = {
     },
     xAxis: [
         {
-            name: "",
+            name: "年龄(岁)",
             boundaryGap: false,
             type: "category",
             data: [],

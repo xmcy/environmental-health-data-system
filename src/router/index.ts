@@ -19,19 +19,16 @@ const routes: Array<RouteConfig> = [
                 path: "/country",
                 name: "country",
                 component: () => import(/* webpackChunkName: "home" */ "@/views/app/country")
-            }
-        ],
-        component: () => import("@/views/app")
-    },
-    {
-        path: "/",
-        name: "disease",
-        redirect: "/login",
-        children: [
+            },
             {
                 path: "/disease",
                 name: "disease",
                 component: () => import(/* webpackChunkName: "home" */ "@/views/app/disease")
+            },
+            {
+                path: "/psychology",
+                name: "psychology",
+                component: () => import(/* webpackChunkName: "home" */ "@/views/app/psychology")
             }
         ],
         component: () => import("@/views/app")

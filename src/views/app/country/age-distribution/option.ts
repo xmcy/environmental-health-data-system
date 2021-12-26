@@ -2,8 +2,10 @@ let option: any = {
     color: ["#E24246", "#EE8B34", "#F8D748", "#B3E549", "#66DBB0", "#00C8C8", "#66DBB0", "#3E8CEF", "#632ECE", "#EA449A"],
     tooltip: {
         trigger: "axis",
-        axisPointer: {}
-    },
+        axisPointer: {
+          type: "shadow"
+        }
+      },
     legend: {
         textStyle: {
             color: "#fff"

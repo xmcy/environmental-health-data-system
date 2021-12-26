@@ -1,4 +1,4 @@
-import { Component, Prop, Watch } from "vue-property-decorator";
+import { Component, Prop } from "vue-property-decorator";
 import { GTemplate } from "@/component/template";
 import option from "./option";
 import "./index.scss";
@@ -7,23 +7,16 @@ import "./index.scss";
     template: require("./index.html")
 })
 export class Provinces extends GTemplate {
-    @Prop({ default: "慢病患病率省份排行榜" })
+    @Prop({ default: "心理健康省份排行榜" })
     title!: string;
-    @Prop({ default: "" })
-    disease!: string;
 
     data: Array<any> = [];
     chartOption = option;
     xData = [];
     legendData: any = [];
 
-    @Watch("disease", { immediate: true, deep: true })
-    change() {
-        this.query();
-    }
-
     async query() {
-        let data: any = await this.service.get(`/free/disease/rank/province/${this.disease}`);
+        let data: any = await this.service.get("/free/depression/rank/province");
         if (!data || !data.result) {
             this.data = [];
             return;

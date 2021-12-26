@@ -5,9 +5,9 @@
     <Habits :country="active" />
     <Relevance :country="active" />
     <PopulationDistribution :country="active" />
+    <CenterAnimation />
     <div class="countries">
         <div :class="['item',{'active':item.code===active}]" v-for="(item,index) in data" @click.stop="onChoose(item)">
             {{item.text}}</div>
     </div>
-    <CenterAnimation />
 </article>

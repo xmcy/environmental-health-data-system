@@ -1,0 +1,11 @@
+@charset 'UTF-8';
+@import "@/component/template";
+
+.psychology .map {
+    @include size(7.7rem, 5.7rem);
+    @include center(horizontal);
+    top: 1rem;
+    .chart {
+        @include size;
+    }
+}
