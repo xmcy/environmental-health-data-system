@@ -1,7 +1,9 @@
 <article class="disease">
+    <Rate />
     <Trend />
     <Provinces :disease="active" />
     <PopulationDistribution :disease="active" />
+    <Relevance />
     <div class="diseases">
         <div :class="['item',{'active':item.code===active}]" v-for="(item,index) in data" @click.stop="onChoose(item)">
             {{item.text}}</div>

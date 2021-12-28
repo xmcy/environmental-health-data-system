@@ -3,9 +3,9 @@ let option: any = {
     tooltip: {
         trigger: "axis",
         axisPointer: {
-          type: "shadow"
+            type: "shadow"
         }
-      },
+    },
     legend: {
         textStyle: {
             color: "#fff"

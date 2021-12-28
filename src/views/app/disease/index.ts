@@ -1,15 +1,19 @@
 import { Vue, Component, Watch } from "vue-property-decorator";
+import { Rate } from "./rate";
 import { Trend } from "./trend";
 import { Provinces } from "./provinces";
 import { PopulationDistribution } from "./population-distribution";
+import { Relevance } from "./relevance";
 import "./index.scss";
 
 @Component({
     template: require("./index.html"),
     components: {
+        Rate,
         Trend,
         Provinces,
-        PopulationDistribution
+        PopulationDistribution,
+        Relevance
     }
 })
 export default class Disease extends Vue {

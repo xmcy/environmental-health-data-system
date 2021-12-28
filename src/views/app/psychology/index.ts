@@ -3,6 +3,7 @@ import { DegreeAnalysis } from "./degree-analysis";
 import { Trend } from "./trend";
 import { PopulationDistribution } from "./population-distribution";
 import { Provinces } from "./provinces";
+import { Influnce } from "./influnce";
 import { Risk } from "./risk";
 import { Map } from "./map";
 import "./index.scss";
@@ -15,6 +16,7 @@ import "./index.scss";
         Trend,
         Provinces,
         PopulationDistribution,
+        Influnce,
         Risk
     }
 })

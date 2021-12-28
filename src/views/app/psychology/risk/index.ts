@@ -19,6 +19,6 @@ export class Risk extends GTemplate {
             this.data = [];
             return;
         }
-        this.data = data.result;
+        this.data = data.result?.slice(0, 5);
     }
 }

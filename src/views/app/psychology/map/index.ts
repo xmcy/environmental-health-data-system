@@ -10,9 +10,9 @@ import "./index.scss";
 export class Map extends GTemplate {
     @Prop({ default: "心理健康趋势变化" })
     title!: string;
-   chartOption: any = option;
+    chartOption: any = option;
 
-   mounted() {
+    mounted() {
         this.initMap();
         let data = [
             {
@@ -59,7 +59,7 @@ export class Map extends GTemplate {
         this.initEchart(data);
     }
 
-   initMap() {
+    initMap() {
         (<any>window).echarts.registerMap("china", require("./china.json")); // 注册地图
         (<any>this.$refs.map).setOption(this.chartOption);
     }

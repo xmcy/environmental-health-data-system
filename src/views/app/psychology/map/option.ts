@@ -25,25 +25,27 @@ let option = {
     },
     series: [
         {
-            "name": "信息热点",
-            "type": "effectScatter",
-            "coordinateSystem": "geo",
-            "zlevel": 2,
-            "rippleEffect": {
-                "brushType": "stroke"
+            name: "信息热点",
+            type: "effectScatter",
+            coordinateSystem: "geo",
+            zlevel: 2,
+            rippleEffect: {
+                brushType: "stroke"
             },
-            "symbolSize": function (val: Array<number>) { return val[2] / 10; },
-            "label": {
+            symbolSize: function(val: Array<number>) {
+                return val[2] / 10;
+            },
+            label: {
                 show: false,
-                "formatter": "{b}",
-                "position": "right"
+                formatter: "{b}",
+                position: "right"
                 // "color": "rgb(255, 230, 73)"
             },
-            "itemStyle": {
-                "color": "rgba(221, 185, 38, 0.9)"
+            itemStyle: {
+                color: "rgba(221, 185, 38, 0.9)"
             },
-            "emphasis": {
-                "lable": {
+            emphasis: {
+                lable: {
                     show: true
                 }
             },
@@ -52,7 +54,7 @@ let option = {
             //         return params.name + " : " + params.value[2];
             //     }
             // },
-            "data": []
+            data: []
         }
     ]
 };

@@ -1,0 +1,22 @@
+@charset 'UTF-8';
+@import "@/component/template";
+
+.disease .relevance {
+    @extend %g-template;
+    @extend %g-template-style;
+    @include size(5.3rem, 3rem);
+    @include absolute($bottom: 1.2rem, $right: 0.2rem);
+    font-size: 0.12rem;
+
+    main {
+        position: relative;
+        .chart-warper {
+            @include absolute($top: 0, $left: 0);
+            @include size;
+            z-index: 10;
+        }
+        .echarts {
+            @include size;
+        }
+    }
+}

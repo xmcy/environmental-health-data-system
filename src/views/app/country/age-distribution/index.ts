@@ -42,11 +42,11 @@ export class AgeDistribution extends GTemplate {
         this.chartOption.color = this.colors;
         this.chartOption.series = [];
         this.chartOption.yAxis.data = [];
-        this.yData = this.data.map((i: any) =>i.text);
-        let data = (this.data[0].value).map((g: any) => g);
+        this.yData = this.data.map((i: any) => i.text);
+        let data = this.data[0].value.map((g: any) => g);
         data.forEach((g: any, index: any) => {
             let obj = {
-                name:g.text,
+                name: g.text,
                 stack: "total",
                 type: "bar",
                 barMaxWidth: "34%",

@@ -1,19 +1,12 @@
-let option: any = {
-    backgroundColor: "rgba(0,0,0,0",
+let bgOption: any = {
     tooltip: {
         trigger: "item"
     },
     legend: {
-        show: true,
-        icon: "circle",
-        itemHeight: 12,
-        itemWidth: 12,
-        textStyle: {
-            color: "rgba(180, 209, 212, 1)"
-        }
+        show: false
     },
     grid: {
-        top: "14%",
+        top: "8%",
         bottom: "14%",
         right: "6%"
     },
@@ -90,4 +83,4 @@ let option: any = {
         // }
     ]
 };
-export default option;
+export default bgOption;
