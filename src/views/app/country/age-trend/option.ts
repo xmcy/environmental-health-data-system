@@ -2,7 +2,7 @@ let option: any = {
     textStyle: {
         color: "#3FB0FF"
     },
-    color: ["#FFBE46", "#0291FF", "#EE6667", "#FAE300", "#F9854B", "#00D13C", "#E164FF"],
+    color: ["#5A85E7", "#0291FF", "#66DBB0", "#12D94B", "#54E5EE"],
     legend: {
         show: true,
         icon: "circle",

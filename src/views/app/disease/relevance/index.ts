@@ -16,9 +16,9 @@ export class Relevance extends GTemplate {
     data: Array<any> = [];
     chartOption = option;
     chartBgOption = bgOption;
-    colors: any = ["#FB9A55", "#FFBE46", "#0291FF"];
-    symbols = [`image://${require("@/assets/images/red.png")}`, `image://${require("@/assets/images/yellow.png")}`, `image://${require("@/assets/images/blue.png")}`];
-    bgs = [`image://${require("@/assets/images/red-bg.png")}`, `image://${require("@/assets/images/yellow-bg.png")}`, `image://${require("@/assets/images/blue-bg.png")}`];
+    colors: any = ["rgba(90, 133, 231, 1)", "rgba(2, 145, 255, 1)", "rgba(107, 217, 141, 1)"];
+    symbols = [`image://${require("@/assets/images/bar1.png")}`, `image://${require("@/assets/images/bar2.png")}`, `image://${require("@/assets/images/bar3.png")}`];
+    bgs = [`image://${require("@/assets/images/bar1-bg.png")}`, `image://${require("@/assets/images/bar2-bg.png")}`, `image://${require("@/assets/images/bar3-bg.png")}`];
 
     @Watch("country", { immediate: true, deep: true })
     change() {

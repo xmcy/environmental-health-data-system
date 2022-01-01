@@ -53,34 +53,11 @@ let bgOption: any = {
             axisTick: {
                 show: false
             }
+        },
+        {
+            axisLabel: { show: false }
         }
     ],
-    series: [
-        // {
-        //     name: "",
-        //     color: "#FB9A55",
-        //     type: "pictorialBar",
-        //     barWidth: 20,
-        //     symbol: `image://${require("@/assets/images/red.png")}`,
-        //     data: []
-        // },
-        // {
-        //     name: "",
-        //     color: "#FFBE46",
-        //     type: "pictorialBar",
-        //     barWidth: 20,
-        //     symbol: `image://${require("@/assets/images/yellow.png")}`,
-        //     data: []
-        // },
-        // {
-        //     name: "",
-        //     color: "#0291FF",
-        //     type: "pictorialBar",
-        //     barWidth: 20,
-        //     barGap: "30%",
-        //     symbol: `image://${require("@/assets/images/blue.png")}`,
-        //     data: []
-        // }
-    ]
+    series: []
 };
 export default bgOption;

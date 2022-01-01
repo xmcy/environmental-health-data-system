@@ -10,6 +10,11 @@
 
     main {
         position: relative;
+        .chart-bg {
+            @include size(85%, 40%);
+            @include bg-img("~@/assets/images/bars-bg.png");
+            @include absolute($bottom: 9%, $left: 10%);
+        }
         .chart-warper {
             @include absolute($top: 0, $left: 0);
             @include size;

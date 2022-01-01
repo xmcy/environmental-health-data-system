@@ -52,7 +52,7 @@ export class Habits extends GTemplate {
                 type: "pie",
                 startAngle: 60 * index,
                 radius: [`${(7 - index * 2) * 10}%`, `${(8 - index * 2) * 10}%`],
-                center: ["50%", "45%"],
+                center: ["50%", "44%"],
                 color: this.colors[index].before,
                 z: index,
                 itemStyle: {

@@ -2,7 +2,7 @@ let option: any = {
     textStyle: {
         color: "#3FB0FF"
     },
-    color: ["rgba(249, 133, 75, 1)", "rgba(250, 227, 0, 1)", "rgba(2, 145, 255, 1)", "rgba(0, 209, 60, 1)", "rgba(225, 100, 255, 1)", "#00D13C", "#E164FF"],
+    color: ["#5A85E7", "#0291FF", "#66DBB0", "#12D94B", "#54E5EE"],
     legend: {
         show: true,
         icon: "circle",
@@ -33,7 +33,7 @@ let option: any = {
     },
     grid: {
         left: "3%",
-        right: "14%",
+        right: "10%",
         top: "22%",
         bottom: "6%",
         containLabel: true

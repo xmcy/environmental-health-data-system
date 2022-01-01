@@ -82,7 +82,7 @@ let option: any = {
             data: [],
             labelLine: {
                 show: true,
-                length2: 40,
+                length2: 30,
                 showAbove: true
             }
         },

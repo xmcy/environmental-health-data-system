@@ -1,5 +1,5 @@
 let option: any = {
-    color: ["#E24246", "#EE8B34", "#F8D748", "#B3E549", "#66DBB0", "#00C8C8", "#66DBB0", "#3E8CEF", "#632ECE", "#EA449A"],
+    color: ["#C1532B", "#C08A28", "#C2B728", "#5DB24D", "#269158", "#30AD8A", "#31A2A4", "#1C7CAB", "#1F88BA", "#1156A2"],
     tooltip: {
         trigger: "axis",
         axisPointer: {

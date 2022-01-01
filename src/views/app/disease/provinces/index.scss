@@ -10,7 +10,7 @@
 
     main {
         .echarts {
-            @include size;
+            @include size(97%,100%);
         }
     }
 }

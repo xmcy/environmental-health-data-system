@@ -51,7 +51,7 @@ export class AgeTrend extends GTemplate {
                 symbolSize: 4,
                 itemStyle: {
                     normal: {
-                        color: this.colors[index],
+                        color: "#fff",
                         borderColor: this.colors[index],
                         lineStyle: {
                             color: this.colors[index],

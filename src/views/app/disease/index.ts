@@ -4,11 +4,13 @@ import { Trend } from "./trend";
 import { Provinces } from "./provinces";
 import { PopulationDistribution } from "./population-distribution";
 import { Relevance } from "./relevance";
+import { CenterImg } from "./center-img";
 import "./index.scss";
 
 @Component({
     template: require("./index.html"),
     components: {
+        CenterImg,
         Rate,
         Trend,
         Provinces,

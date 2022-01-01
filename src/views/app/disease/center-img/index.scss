@@ -1,0 +1,57 @@
+@charset 'UTF-8';
+@import "@/component/template";
+
+.disease .center-img {
+    @include size(6.8rem, 8rem);
+    @include absolute($top: 1.4rem, $left: 6.3rem);
+    @include bg-img("~@/assets/images/ren.png");
+    .img-warpper {
+        @include size;
+        position: relative;
+        .feibing {
+            @include bg-img("~@/assets/images/feibing.png");
+            @include size(2.3rem, 1.2rem);
+            @include absolute($top: 15%, $left: 48%);
+        }
+        .weibing {
+            @include bg-img("~@/assets/images/weibing.png");
+            @include size(2.7rem, 1.5rem);
+            @include absolute($top: 23%, $left: 44%);
+        }
+        .naobing {
+            @include bg-img("~@/assets/images/naobing.png");
+            @include size(2.6rem, 1.1rem);
+            @include absolute($bottom: 92%, $left: 44.5%);
+        }
+        .zhongfeng {
+            @include bg-img("~@/assets/images/zhongfeng.png");
+            @include size(2.5rem, 1.1rem);
+            @include absolute($bottom: 93%, $right: 48%);
+        }
+        .yiyu {
+            @include bg-img("~@/assets/images/yiyu.png");
+            @include size(3rem, 1rem);
+            @include absolute($bottom: 87%, $right: 48%);
+        }
+        .xinzengbing {
+            @include bg-img("~@/assets/images/xinzengbing.png");
+            @include size(3rem, 1.4rem);
+            @include absolute($bottom: 68%, $right: 52%);
+        }
+        .aizheng {
+            @include bg-img("~@/assets/images/aizheng.png");
+            @include size(2.8rem, 1.2rem);
+            @include absolute($bottom: 56%, $right: 48%);
+        }
+        .tangniaobing {
+            @include bg-img("~@/assets/images/tangniaobing.png");
+            @include size(2.8rem, 1.8rem);
+            @include absolute($bottom: 45%, $right: 48%);
+        }
+        .guanjieyan {
+            @include bg-img("~@/assets/images/guanjieyan.png");
+            @include size(2.8rem, 1rem);
+            @include absolute($bottom: 32%, $right: 57%);
+        }
+    }
+}

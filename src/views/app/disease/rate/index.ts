@@ -27,7 +27,7 @@ export class Rate extends GTemplate {
     }
 
     async query() {
-        let data: any = await this.service.get(`/free/disease/rank/province/${this.disease}`);
+        let data: any = await this.service.get("/free/disease/distribution");
         if (!data || !data.result) {
             this.data = [];
             return;
@@ -37,7 +37,7 @@ export class Rate extends GTemplate {
     }
 
     initChart() {
-        var total = this.data.reduce((prev, curr) => prev + curr.value, 0);
+        let total = this.data.reduce((prev, curr) => prev + curr.value, 0);
         this.chartOption.series[0].label = {
             show: true,
             position: "outside",

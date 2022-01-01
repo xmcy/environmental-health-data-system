@@ -17,10 +17,10 @@ export class Provinces extends GTemplate {
     xData = [];
     legendData: any = [];
 
-    @Watch("disease", { immediate: true, deep: true })
-    change() {
-        this.query();
-    }
+    // @Watch("disease", { immediate: true, deep: true })
+    // change() {
+    //     this.query();
+    // }
 
     async query() {
         let data: any = await this.service.get(`/free/disease/rank/province/${this.disease}`);
