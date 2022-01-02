@@ -3,7 +3,7 @@
 
 .global .map {
     @extend %g-template;
-    @extend %g-template-style;
+    // @extend %g-template-style;
     @include size(18.7rem, 5.4rem);
     @include center(horizontal);
     top: 1rem;
