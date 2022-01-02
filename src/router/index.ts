@@ -16,6 +16,11 @@ const routes: Array<RouteConfig> = [
         redirect: "/country",
         children: [
             {
+                path: "/global",
+                name: "global",
+                component: () => import(/* webpackChunkName: "home" */ "@/views/app/global")
+            },
+            {
                 path: "/country",
                 name: "country",
                 component: () => import(/* webpackChunkName: "home" */ "@/views/app/country")

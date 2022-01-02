@@ -1,0 +1,14 @@
+<article class="risk">
+    <header>
+        <span>{{title}}</span>
+    </header>
+    <main>
+        <div v-for="(item,index) in data" :style="`color:${color[index]}`" class="item">
+            <div class="ball">
+                <span :style="`color:${textcolor[index]}`">{{item.value}}%</span>
+            </div>
+            <div class="text" :style="`color:${textcolor[index]}`">{{item.text}}</div>
+        </div>
+        <div class="center-bg"></div>
+    </main>
+</article>

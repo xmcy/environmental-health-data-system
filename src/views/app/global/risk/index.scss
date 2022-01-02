@@ -1,0 +1,55 @@
+@charset 'UTF-8';
+@import "@/component/template";
+
+.psychology .risk {
+    @extend %g-template;
+    @extend %g-template-style;
+    @include size(5.3rem, 3rem);
+    @include absolute($bottom: 1.2rem, $right: 0.2rem);
+    font-size: 0.12rem;
+
+    main {
+        position: relative;
+        .center-bg {
+            @include size(3rem, 1.8rem);
+            @include absolute($top:24%,$left:50%);
+            transform: translateX(-50%);
+            @include bg-img("~@/assets/images/risk-bg.png");
+        }
+        .item {
+            position: absolute;
+            @include flex(column, center, center);
+            .ball {
+                @include size(0.6rem, 0.6rem);
+                @include flex(row, center, center);
+                border-radius: 50%;
+                font-size: 0.2rem;
+                background: linear-gradient(180deg, currentcolor 20%, rgba(53, 255, 208, 0) 50%, rgba(53, 255, 208, 0) 100%);
+                border-image: linear-gradient(180deg, currentcolor, rgba(80, 227, 219, 0)) 1 1;
+            }
+            .text {
+                font-size: 0.14rem;
+            }
+            &:first-child {
+                top: 22%;
+                left: 6%;
+            }
+            &:nth-child(2) {
+                top: 14%;
+                left: 25%;
+            }
+            &:nth-child(3) {
+                top: 7%;
+                left: calc(50% - 0.3rem);
+            }
+            &:nth-child(4) {
+                top: 14%;
+                left: 63%;
+            }
+            &:nth-child(5) {
+                top: 22%;
+                left: 80%;
+            }
+        }
+    }
+}
