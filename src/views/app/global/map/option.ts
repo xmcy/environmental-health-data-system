@@ -26,23 +26,31 @@ let option = {
     series: [
         {
             name: "信息热点",
-            type: "effectScatter",
+            type: "scatter",
             coordinateSystem: "geo",
             zlevel: 2,
             rippleEffect: {
                 brushType: "stroke"
             },
-            symbolSize: function(val: Array<number>) {
-                return val[2] / 10;
-            },
+            symbol: "pin",
+            // symbolSize: function(val: Array<number>) {
+            //     return val[2] / 10;
+            // },
+            symbolSize: [50,50],
             label: {
-                show: false,
-                formatter: "{b}",
-                position: "right"
-                // "color": "rgb(255, 230, 73)"
+                normal: {
+                    show: true,
+                    textStyle: {
+                        color: "#fff",
+                        fontSize: 12
+                    },
+                    formatter(value: any) {
+                        return value.data.value[2];
+                    }
+                }
             },
             itemStyle: {
-                color: "rgba(221, 185, 38, 0.9)"
+                color: "rgba(221, 185, 38, 1)"
             },
             emphasis: {
                 lable: {

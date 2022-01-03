@@ -6,8 +6,27 @@
     @extend %g-template-style;
     @include size(18.7rem, 5.4rem);
     @include center(horizontal);
+    clip-path: polygon(0.38% 0%, 99.6% 0%, 100% 1.6%, 100% 99.2%, 99.6% 100%, 0.5% 100%, 0% 99%, 0% 1.2%);
     top: 1rem;
     .chart {
         @include size;
+    }
+    .disease {
+        @include absolute($right: 1.2%,$top:20%);
+        > .item {
+            @include size(0.8rem, 0.5rem);
+            @include flex(row, center, center);
+            font-size: 0.14rem;
+            margin-bottom: 0.18rem;
+            color: #bbe7f0;
+            background: linear-gradient(180deg, #3a5fc9 0%, rgba(58, 95, 201, 0) 35%, rgba(58, 95, 201, 0.26) 72%, #3a5fc9 100%);
+            border: 1px solid;
+            border-image: linear-gradient(180deg, rgba(70, 127, 224, 1), rgba(92, 150, 231, 0), rgba(82, 140, 228, 0), rgba(70, 127, 224, 1)) 1 1;
+            cursor: pointer;
+        }
+        > .active {
+            background: linear-gradient(180deg, #00c2f6 0%, rgba(92, 188, 241, 0.38) 53%, #00c2f6 99%);
+            border-image: linear-gradient(180deg, rgba(156, 217, 255, 1), rgba(96, 158, 247, 0), rgba(82, 140, 228, 0), rgba(156, 217, 255, 1)) 1 1;
+        }
     }
 }
