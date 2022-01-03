@@ -1,9 +1,8 @@
 <div class="v-login" @keydown.enter="login">
-    <div class="content-left"></div>
-    <div class="content-right">
+    <div class="content">
         <div class="title">
             <div class="logo"></div>
-            <div class="text"></div>
+            <div class="text">环境与健康大数据平台</div>
         </div>
         <a-form-model ref="loginForm" :model="form" :rules="rules">
             <a-form-model-item prop="username">
@@ -16,9 +15,6 @@
                     <a-icon slot="prefix" type="lock" />
                 </a-input>
             </a-form-model-item>
-            <!-- <div class="tool-bar">
-                <a-checkbox v-model="remember">记住账号</a-checkbox>
-            </div> -->
             <a-form-model-item>
                 <a-button @click="login" class="login-btn">登 录</a-button>
             </a-form-model-item>

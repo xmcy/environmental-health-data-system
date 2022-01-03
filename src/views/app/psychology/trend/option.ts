@@ -41,6 +41,9 @@ let option: any = {
     xAxis: [
         {
             name: "年龄(岁)",
+            nameTextStyle: {
+                padding: [0, 0, 0, -10]
+            },
             boundaryGap: false,
             type: "category",
             data: [],

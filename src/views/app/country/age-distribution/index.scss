@@ -7,7 +7,7 @@
     @include size(5.3rem, 5.4rem);
     @include absolute($top: 1rem, $right: 0.2rem);
     font-size: 0.12rem;
-    overflow: visible;
+    clip-path: polygon(1.7% 0%, 98.2% 0%, 100% 1.6%, 100% 98.4%, 98.4% 100%, 1.4% 100%, 0% 98.2%, 0% 1.7%);
 
     main {
         .echarts {

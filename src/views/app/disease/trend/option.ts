@@ -8,7 +8,7 @@ let option: any = {
         icon: "circle",
         itemWidth: 10,
         itemHeight: 10,
-        top: "2%",
+        top: "0%",
         textStyle: {
             color: "#fff"
         },
@@ -34,7 +34,7 @@ let option: any = {
     grid: {
         left: "3%",
         right: "10%",
-        top: "22%",
+        top: "24%",
         bottom: "6%",
         containLabel: true
     },

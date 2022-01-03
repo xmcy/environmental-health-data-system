@@ -1,3 +1,19 @@
 <article class="overview">
-   
+    <div class="swiper-button-prev"></div>
+    <swiper ref="mySwiper" :options="swiperOptions">
+        <swiper-slide v-for="(item,index) in data" :key="index">
+            <div class="chart-warpper">
+                <div class="sub-title">
+                    <span class="name">{{item.text}}</span>
+                    <span>慢性疾病TOP5</span>
+                    <span class="total">总数据量:{{item.sampleSize}}</span>
+                </div>
+                <div class="contet">
+                    <g-ECharts :update-options="{notMerge: true}" :option="item.chartOption" autoresize />
+                    <img :src="item.img" />
+                </div>
+            </div>
+        </swiper-slide>
+    </swiper>
+    <div class="swiper-button-next"></div>
 </article>

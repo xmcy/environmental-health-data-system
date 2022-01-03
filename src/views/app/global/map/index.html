@@ -1,6 +1,6 @@
 <article class="map">
     <g-ECharts ref="map" class="chart" :options="chartOption" autoresize />
-    <div class="disease">
+    <div class="diseases">
         <div :class="['item',{'active':item.code===active}]" v-for="(item,index) in disease"
             @click.stop="onChoose(item)">{{item.text}}</div>
     </div>

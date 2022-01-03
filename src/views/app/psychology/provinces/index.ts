@@ -32,7 +32,7 @@ export class Provinces extends GTemplate {
                 value: g.value
             };
         });
-        this.chartOption.yAxis.data = data.map(g => g.name);
+        this.chartOption.yAxis[0].data = data.map(g => g.name);
         this.chartOption.series[1].data = data;
     }
 }

@@ -8,15 +8,12 @@ let option: any = {
         icon: "circle",
         itemWidth: 10,
         itemHeight: 10,
-        top: "87%",
+        top: "84%",
         textStyle: {
             color: "#fff"
         },
         data: []
     },
-    // tooltip: {
-    //     show: true
-    // },
     tooltip: {
         trigger: "axis",
         backgroundColor: "#303750",
@@ -37,8 +34,8 @@ let option: any = {
     grid: {
         left: "3%",
         right: "5%",
-        top: "12%",
-        bottom: "16%",
+        top: "16%",
+        bottom: "18%",
         containLabel: true
     },
     xAxis: [

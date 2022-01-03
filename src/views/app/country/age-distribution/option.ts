@@ -7,6 +7,9 @@ let option: any = {
         }
     },
     legend: {
+        icon: "circle",
+        itemWidth: 10,
+        itemHeight: 10,
         textStyle: {
             color: "#fff"
         }
@@ -14,13 +17,16 @@ let option: any = {
     grid: {
         left: "2%",
         right: "16%",
-        top: "9%",
+        top: "10%",
         bottom: "2%",
         containLabel: true
     },
     xAxis: {
         type: "value",
         name: "患病率(%)",
+        nameTextStyle: {
+            padding: [0, 0, 0, -10]
+        },
         axisLine: {
             show: true,
             lineStyle: {

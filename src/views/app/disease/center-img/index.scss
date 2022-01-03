@@ -3,7 +3,7 @@
 
 .disease .center-img {
     @include size(6.8rem, 8rem);
-    @include absolute($top: 1.4rem, $left: 6.3rem);
+    @include absolute($top: 1.5rem, $left: 6.3rem);
     @include bg-img("~@/assets/images/ren.png");
     .img-warpper {
         @include size;

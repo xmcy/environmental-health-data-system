@@ -47,11 +47,13 @@ export class CommonDiseases extends GTemplate {
             let y = {
                 name: g.text,
                 type: "line",
-                symbol: "circle",
-                symbolSize: 4,
+                // symbol: 'emptyCircle',
+                // symbolSize: 6,
+                showSymbol: false,
+                color: this.colors[index],
                 itemStyle: {
                     normal: {
-                        color: "#fff",
+                        color: this.colors[index],
                         borderColor: this.colors[index],
                         lineStyle: {
                             color: this.colors[index],

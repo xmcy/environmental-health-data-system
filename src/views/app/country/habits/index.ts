@@ -51,7 +51,7 @@ export class Habits extends GTemplate {
                 name: g.text,
                 type: "pie",
                 startAngle: 60 * index,
-                radius: [`${(7 - index * 2) * 10}%`, `${(8 - index * 2) * 10}%`],
+                radius: [`${(6 - index * 2) * 10}%`, `${(7 - index * 2) * 10}%`],
                 center: ["50%", "44%"],
                 color: this.colors[index].before,
                 z: index,

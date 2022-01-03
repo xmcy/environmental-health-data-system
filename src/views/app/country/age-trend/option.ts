@@ -33,7 +33,7 @@ let option: any = {
     },
     grid: {
         left: "3%",
-        right: "14%",
+        right: "15%",
         top: "22%",
         bottom: "6%",
         containLabel: true
@@ -41,6 +41,9 @@ let option: any = {
     xAxis: [
         {
             name: "年龄(岁)",
+            nameTextStyle: {
+                padding: [0, 0, 0, -10]
+            },
             boundaryGap: false,
             type: "category",
             data: [],

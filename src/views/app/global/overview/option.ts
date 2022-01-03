@@ -9,8 +9,8 @@ let option: any = {
         {
             name: "背景线",
             type: "pie",
-            radius: ["73%", "74%"],
-            center: ["50%", "42%"],
+            radius: ["65%", "66%"],
+            center: ["50%", "50%"],
             label: {
                 show: false
             },
@@ -43,8 +43,8 @@ let option: any = {
         {
             name: "背景线2",
             type: "pie",
-            radius: ["60%", "68%"],
-            center: ["50%", "42%"],
+            radius: ["56%", "62%"],
+            center: ["50%", "50%"],
             label: {
                 show: false
             },
@@ -76,26 +76,12 @@ let option: any = {
         {
             name: "收入",
             type: "pie",
-            radius: ["42%", "60%"],
-            center: ["50%", "42%"],
+            radius: ["30%", "56%"],
+            center: ["50%", "50%"],
             z: 10,
             data: [],
             labelLine: {
                 show: true,
-                length2: 20,
-                showAbove: true
-            }
-        },
-        {
-            name: "",
-            type: "pie",
-            radius: ["0%", "32%"],
-            center: ["50%", "42%"],
-            z: 10,
-            data: [],
-            labelLine: {
-                show: true,
-                length2: 20,
                 showAbove: true
             }
         }

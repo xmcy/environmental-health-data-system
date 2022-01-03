@@ -2,10 +2,104 @@
 @import "@/component/template";
 
 .global .overview {
-    @extend %g-template;
-    @extend %g-template-style;
     @include size(18.7rem, 3rem);
     @include center(horizontal);
-    clip-path: polygon(0.38% 0%, 99.6% 0%, 100% 2.2%, 100% 97.8%, 99.6% 100%, 0.5% 100%, 0% 97.8%, 0% 2.4%);
-    bottom: 1.3rem;
+    // @include flex(row,space-around,center);
+    bottom: 1.2rem;
+
+    .swiper-container {
+        @include size(calc(100% - 1.2rem), 100%);
+
+        .swiper-slide {
+            @include flex(row, center, center);
+
+            .chart-warpper {
+                @include size(96%, 100%);
+                background: rgba(6, 25, 43, 0.42);
+                box-shadow: inset 0px 0px 3px 2px rgba(25, 140, 255, 0.52);
+                border: 1px solid;
+                border-image: linear-gradient(180deg, rgba(58, 95, 201, 1), rgba(64, 197, 255, 0), rgba(58, 92, 199, 1)) 1 1;
+                background: url("~@/assets/images/section-bg-top-left.png") 0 0 no-repeat, url("~@/assets/images/section-bg-top-right.png") 100% 0 no-repeat,
+                    url("~@/assets/images/section-bg-bottom-left.png") 0 100% no-repeat, url("~@/assets/images/section-bg-bottom-right.png") 100% 100% no-repeat;
+                clip-path: polygon(2.5% 0%, 97.5% 0%, 100% 4%, 100% 97%, 97.5% 100%, 2.5% 100%, 0% 97%, 0% 4%);
+                padding: 1% 3% 1% 2%;
+
+                .sub-title {
+                    @include flex(row, flex-start, center);
+                    height: .4rem;
+                    padding-left: 0.6rem;
+                    font-size: 0.16rem;
+                    letter-spacing: 1px;
+                    cursor: default;
+                    position: relative;
+                    color: rgba(56, 221, 255, 1);
+
+                    .name {
+                        color: #FFBE46;
+                        margin-right: .04rem;
+                    }
+
+                    .total {
+                        margin-left: auto;
+                        color: #BBE7F0;
+                    }
+
+                    &:before {
+                        content: "";
+                        @include size(0.38rem, 0.34rem);
+                        @include absolute($top: 0.03rem, $left: 0.14rem);
+                        @include bg-img("~@/assets/images/header-icon.png");
+                        animation: showing 2s infinite;
+                    }
+
+                    @keyframes showing {
+                        0% {
+                            opacity: 0.4;
+                        }
+
+                        50% {
+                            opacity: 1;
+                        }
+
+                        100% {
+                            opacity: 0.4;
+                        }
+                    }
+                }
+
+                .contet {
+                    @include size(100%, calc(100% - 0.4rem));
+                    position: relative;
+
+                    .echarts {
+                        @include size;
+                    }
+
+                    img {
+                        @include size(.44rem, .44rem);
+                        @include absolute($top:50%, $left:50%);
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+    }
+
+    .swiper-button-prev {
+        @include size(.6rem, 100%);
+        @include bg-img("~@/assets/images/prev.png");
+        left: 0;
+        top: 0;
+        margin: 0;
+        background-size: 100% 100%;
+    }
+
+    .swiper-button-next {
+        @include size(.6rem, 100%);
+        @include bg-img("~@/assets/images/next.png");
+        background-size: 100% 100%;
+        top: 0;
+        right: 0;
+        margin: 0;
+    }
 }

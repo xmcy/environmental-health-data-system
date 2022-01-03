@@ -36,17 +36,6 @@ export default class Login extends Vue {
         password: [{ required: true, message: "密码不能为空", trigger: "blur" }]
     };
 
-    public mounted() {
-        // 自动登录
-        // const { username, password } = Credential.user;
-        // this.form.username = username;
-        // this.form.password = password;
-        // if (username && password) {
-        //     this.remember = true;
-        //     this.login();
-        // }
-    }
-
     public login() {
         (<any>this.$refs.loginForm).validate(async (valid: any) => {
             if (!valid) {
@@ -60,21 +49,13 @@ export default class Login extends Vue {
                 username: this.form.username
             };
 
-            // let result: any = await this.service.post("/oauth/extras/token", params);
-            // if (!result?.access_token) {
-            //     this.logOut();
-            //     this.$message.error("登录失败");
-            //     console.error("登录失败:", result);
-            //     return;
-            // }
-
-            // Credential.remember = this.remember;
-            // Credential.token = result.access_token;
-            // Credential.user = { ...result.user, username: this.form.username };
-            // Credential.permission = result.permissions;
-            this.$router.push({ name: "icons" });
+            let result: any = await this.service.post("/oauth/extras/token", params);
+            if (!result?.access_token) {
+                this.$message.error("登录失败");
+                console.error("登录失败:", result);
+                return;
+            }
+            this.$router.push({ name: "global" });
         });
     }
-
-    public logOut() {}
 }

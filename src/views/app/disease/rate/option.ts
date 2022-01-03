@@ -20,7 +20,7 @@ let option: any = {
             name: "常见慢病占比",
             type: "pie",
             radius: ["40%", "70%"],
-            center: ["40%", "44%"],
+            center: ["38%", "44%"],
             roseType: "area",
             label: {
                 show: true,
@@ -29,7 +29,7 @@ let option: any = {
             },
             labelLine: {
                 length: 10,
-                length2: 30
+                length2: 20
             },
             data: []
         }
