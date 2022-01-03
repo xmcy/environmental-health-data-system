@@ -20,11 +20,11 @@ export class overview extends GTemplate {
             delay: 5000
         },
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-            clickable: true,
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            clickable: true
         }
-    }
+    };
     options: any = [];
 
     async query() {
@@ -38,7 +38,7 @@ export class overview extends GTemplate {
                 ...g,
                 img: require(`@/assets/images/${g.text}.png`),
                 chartOption: this.initChart(g.diseases)
-            }
+            };
         });
     }
 

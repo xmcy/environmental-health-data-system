@@ -57,7 +57,7 @@ let option: any = {
             type: "bar",
             barWidth: 14,
             barGap: "-100%",
-            data:[],
+            data: [],
             z: 12,
             itemStyle: {
                 borderRadius: [0, 50, 50, 0],

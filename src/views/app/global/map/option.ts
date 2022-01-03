@@ -36,7 +36,7 @@ let option = {
             // symbolSize: function(val: Array<number>) {
             //     return val[2] / 10;
             // },
-            symbolSize: [50,50],
+            symbolSize: [50, 50],
             label: {
                 normal: {
                     show: true,
