@@ -13,7 +13,7 @@ const routes: Array<RouteConfig> = [
     {
         path: "/",
         name: "app",
-        redirect: "/global",
+        redirect: "/login",
         children: [
             {
                 path: "/global",

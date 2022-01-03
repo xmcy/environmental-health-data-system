@@ -46,6 +46,7 @@ let bgOption: any = {
                 }
             },
             axisLabel: {
+                show: false,
                 formatter: "{value}",
                 color: "#fff",
                 padding: [0, 0, -24, 0]

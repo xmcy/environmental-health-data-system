@@ -7,7 +7,7 @@ import "./index.scss";
 @Component({
     template: require("./index.html")
 })
-export class overview extends GTemplate {
+export class Overview extends GTemplate {
     @Prop({ default: "各国慢病总览" })
     title!: string;
 
